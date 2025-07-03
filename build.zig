@@ -250,6 +250,7 @@ pub fn build(b: *Build) !void {
                 .{ .name = "test_options", .module = test_options },
             },
         }),
+        .test_runner = .{ .path = b.path("custom_test_runner.zig"), .mode = .simple },
         .filters = test_filters,
         .use_llvm = use_llvm,
         .use_lld = use_llvm,
